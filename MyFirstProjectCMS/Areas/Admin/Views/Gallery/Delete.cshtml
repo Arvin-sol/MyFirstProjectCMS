@@ -1,0 +1,67 @@
+﻿@model DataLayer.Models.Gallery
+
+@{
+    ViewBag.Title = "حذف گالری";
+}
+
+
+
+<h3 style="margin-top:70px;">آیا از حذف @Model.Title مطمئن هستید؟</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortDescription)
+        </dd>
+
+       
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+
+        <dd>
+            <img class="thumbnail" style="width:100px;height:100px" src="~/Images/@Model.ImageName" />
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("بازگشت", "Index")
+        </div>
+    }
+</div>

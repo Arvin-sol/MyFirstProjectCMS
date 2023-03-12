@@ -1,0 +1,52 @@
+﻿@model IEnumerable<DataLayer.Models.Slider>
+@using MyFirstProjectCMS.Utilities
+
+@{
+    ViewBag.Title = "لیست اسلایدر";
+}
+
+<p style="margin-top:50px;">
+    @Html.ActionLink("اسلایدر جدید", "Create")
+</p>
+<table class="table" style=" border: solid; border-color: cadetblue; text-align: center">
+    <tr>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.StardSlider)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndSlider)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StardSlider)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndSlider)
+            </td>
+            <td>
+                @Html.YesNo(@item.IsActive)
+
+            </td>
+            <td>
+                @Html.ActionLink("ویرایش", "Edit", new { id = item.SliderId }) |
+                @Html.ActionLink("حذف", "Delete", new { id = item.SliderId }) |
+                @Html.ActionLink("جزئیات", "Details" ,new {id = item.SliderId})
+            </td>
+        </tr>
+    }
+
+</table>

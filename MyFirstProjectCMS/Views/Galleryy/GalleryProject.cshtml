@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DataLayer.Models.Gallery>
+@{
+    ViewBag.Title = "گالری پروژه";
+}
+<style>
+    .disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+</style>
+<!--Page Title-->
+<section class="page-title">
+    <div class="pattern-layer-one" style="background-image: url(/Content/images/background/pattern-16.png)"></div>
+    <div class="auto-container">
+        <h2>گالری</h2>
+        <ul class="page-breadcrumb">
+            <li><a href="/">صفحه اصلی </a></li>
+            <li>گالری تصاویر پروژه </li>
+        </ul>
+    </div>
+</section>
+<section class="blog-page-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+            @foreach (var item in Model)
+            {
+                <!-- Case Block -->
+                <div class="case-block   col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image">
+                            <img src="~/Images/@item.ImageName" alt="@item.Title" style="width:370px;height:270px;" />
+                            <div class="overlay-box">
+                                <a href="~/Images/@item.ImageName" data-fancybox="gallery" data-caption="" class="search-icon"><span class="icon flaticon-search"></span></a>
+                                <div class="content">
+                                    <h4><a href="/GalleryProjectSinglePage/@item.GalleryId">@item.ProjectName</a></h4>
+                                </div>
+                                <a href="/GalleryProjectSinglePage/@item.GalleryId" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Post Share Options -->
+        <div class="styled-pagination text-center">
+            <ul class="clearfix">
+                <li class="prev @(((int)ViewBag.CurrentBlog==1) ? "disabled" : " ") "><a href="/Gallery/@(ViewBag.CurrentBlog-1)"><span class="fa fa-angle-left"></span> </a></li>
+                @for (int i = 1; i < @ViewBag.GalleryCount + 1; i++)
+                {
+                    <li class="@(((int)ViewBag.CurrentBlog==i)? "active" : " ")"><a href="/Gallery/@i">@i</a></li>
+                }
+                <li class="next @(((int)ViewBag.CurrentBlog>=ViewBag.GalleryCount) ? "disabled" : " ")"><a href="/Gallery/@(ViewBag.CurrentBlog+1)"><span class="fa fa-angle-right"></span> </a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!-- End Blog Page Section -->

@@ -1,0 +1,40 @@
+﻿@model DataLayer.Models.Logo
+@{
+    ViewBag.Title = "حذف";
+}
+
+
+
+<h3>آیا از حذف این تصویر اطمینان دارید؟</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LogoTile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogoTile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+
+        <dd>
+            <img src="~/Images/@Model.ImageName" class="thumbnail" style="max-width: 100px;max-height:100PX" />
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(x => x.LogoId)
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink(" بازگشت ", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DataLayer.Models.Logo>
+
+@{
+    ViewBag.Title = "لیست تصویر لوگو ";
+}
+<br />
+<br />
+<hr />
+
+<p>
+    @Html.ActionLink("افزودن", "Create")
+</p>
+<table class="table" style=" border: solid; border-color: cadetblue">
+    <tr>
+        <th colspan="3" style="text-align:center;background-color:lightcoral"> لطفا برای این بخش تعداد تصاویر شما<span style="text-decoration: underline;"> کمتر یا بیشتر از یک عدد </span>  نباشد    </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LogoTile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(z => z.ImageName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogoTile)
+            </td>
+            <td>
+                <img src="~/Images/@item.ImageName" class="thumbnail" style="max-width: 100px;max-height:100PX" />
+            </td>
+
+            <td>
+                @Html.ActionLink("ویرایش", "Edit", new { id = item.LogoId }) |
+
+                @Html.ActionLink("حذف", "Delete", new { id = item.LogoId })
+            </td>
+        </tr>
+
+    }
+</table>

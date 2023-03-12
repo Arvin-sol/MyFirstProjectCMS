@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>گلوبکس قالب HTML5  | صفحه اصلی </title>
+    <!-- Stylesheets -->
+
+    <link href="@Url.Content("~/Content/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/css/responsive.css")" rel="stylesheet">
+
+
+
+
+    <!-- Color Switcher Mockup -->
+    <link href="@Url.Content("~/Content/css/color-switcher-design.css")" rel="stylesheet">
+
+
+    <!-- Color Themes -->
+    <link id="theme-color-file" href="@Url.Content("~/Content/css/color-themes/default-theme.css")" rel="stylesheet">
+
+
+    <link rel="shortcut icon" href="@Url.Content("~/Content/images/favicon.png")" type="image/x-icon">
+
+    <link rel="icon" href="@Url.Content("~/Content/images/favicon.png")" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="Content/js/respond.js"></script><![endif]-->
+</head>
+
+<body class="hidden-bar-wrapper">
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+        <!-- Main Header-->
+
+        <header class="main-header header-style-one">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <!-- Header Top -->
+                <div class="header-top">
+                    <div class="auto-container">
+                        <div class="clearfix">
+                            <!-- Top Left -->
+                            <div class="top-left">
+                                <ul class="info-list" style="font: small !important; font-family: 'B Nazanin' !important; ">
+                                    <li><a href="/Admin/AdminLogins"><span class="glyphicon glyphicon-user"></span> مدیریت کاربر</a></li>
+                                    <li><a href="/Admin/BlogComments"><span class="glyphicon glyphicon-user"></span> مدیریت نظرات</a></li>
+                                    <li><a href="/Admin/BlogGroups"><span class="glyphicon glyphicon-user"></span> مدیریت گروه وبلاگ</a></li>
+                                    <li><a href="/Admin/Blogs"><span class="glyphicon glyphicon-user"></span> مدیریت وبلاگ</a></li>
+                                    <li><a href="/Admin/Logo"><span class="glyphicon glyphicon-user"></span> مدیریت لوگو</a></li>
+                                    <li><a href="/Admin/Sliders"><span class="glyphicon glyphicon-user"></span> مدیریت اسلایدر</a></li>
+                                    <li><a href="/Admin/Gallery"><span class="glyphicon glyphicon-user"></span> مدیریت گالری</a></li>
+                                    <li><a href="/Admin/AboutUsAdmin"><span class="glyphicon glyphicon-user"></span> مدیریت درباره ی ما</a></li>
+                                    <li><a href="/Admin/FooterAdmin"><span class="glyphicon glyphicon-user"></span>لوگو برای فوتر</a></li>
+                                    <li><a href="/Admin/ContactUsAdmin"><span class="glyphicon glyphicon-user"></span>مدیریت تماس با ما</a></li>
+
+                                </ul>
+                            </div>
+
+                            <!-- Top Right -->
+                            <div class="top-right pull-right">
+                                <!-- Social Box -->
+                                <ul class="social-box">
+                                    <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-dribbble"></a></li>
+                                    <li><a href="#" class="fa fa-google"></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="header-top">
+                    <div class="auto-container">
+                        <div class="clearfix">
+                            <!-- Top Left -->
+                            <div class="top-left">
+                                <!-- Info List -->
+                                <ul class="info-list">
+                                    <li><a href="mailto:info@webmail.com"><span class="icon flaticon-email"></span> info@webmail.com</a></li>
+                                    <li><a href="tel:786-875-864-75"><span class="icon flaticon-telephone"></span> 786 875 864 75</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Top Right -->
+                            <div class="top-right pull-right">
+                                <!-- Social Box -->
+                                <ul class="social-box">
+                                    <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-dribbble"></a></li>
+                                    <li><a href="#" class="fa fa-google"></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+            <!--Header-Upper-->
+            <div class="header-upper">
+                <div class="auto-container clearfix">
+                    @RenderSection("LogoAC", false)
+                    <div class="nav-outer clearfix">
+                        <!--Mobile Navigation Toggler-->
+                        <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="تغییر ناوبری ">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li class="current dropdown">
+                                        <a href="/">صفحه اصلی </a>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="/Home/Index">صفحات اصلی </a>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="">درباره ما </a>
+                                        <ul>
+                                            <li><a href="/AboutUs">درباره ما </a></li>
+                                            <li><a href="testimonial.html">مشتریان ما </a></li>
+                                            <li><a href="comming-soon.html">به زودی </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">خدمات </a>
+                                        <ul>
+                                            <li><a href="services.html">خدمات </a></li>
+                                            <li><a href="services-detail.html">جزئیات خدمات  </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="/GalleyProject/@ViewBag.CurrentBlog">پروژه ها </a>
+                                        <ul>
+                                            <li><a href="projects.html">پروژه ها </a></li>
+                                            <li><a href="/GalleyProject/@ViewBag.CurrentBlog">گالری</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="/Archive/@ViewBag.CurrentBlog"> وبلاگ ها</a>
+                                        <ul>
+                                            <li><a href="/Archive/@ViewBag.CurrentBlog">وبلاگ ها  </a></li>
+                                            <li><a href="">آخرین مقالات</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/ContactUs">تماس با ما </a></li>
+                                </ul>
+                            </div>
+                        </nav>
+
+                        <!-- Main Menu End-->
+                        <div class="outer-box clearfix">
+
+                            <!-- Search Btn -->
+                            <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>
+                            <!-- Quote Btn -->
+                            <div class="btn-box">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a class="theme-btn btn-style-one" href="/Account/SignOut"><span class="txt">خروج </span></a>
+                                }
+                                else
+                                {
+                                    <a class="theme-btn btn-style-one" href="/Account/Login"><span class="txt">ورود</span></a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--End Header Upper-->
+            <!-- Sticky Header  -->
+            <div class="sticky-header">
+                <div class="auto-container clearfix">
+                    <!--Logo-->
+                    <!--Right Col-->
+                    <div class="pull-right">
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <!--Keep This Empty / Menu will come through Javascript-->
+                        </nav><!-- Main Menu End-->
+                        <!-- Main Menu End-->
+                        <div class="outer-box clearfix">
+
+                            <!-- Cart Box -->
+                            <div class="cart-box">
+                                <div class="dropdown">
+                                    <button class="cart-box-btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flaticon-shopping-bag-1"></span><span class="total-cart">2</span></button>
+                                    <div class="dropdown-menu pull-right cart-panel" aria-labelledby="dropdownMenu">
+
+                                        <div class="cart-product">
+                                            <div class="inner">
+                                                <div class="cross-icon"><span class="icon fa fa-remove"></span></div>
+                                                <div class="image"><img src="Content/images/resource/post-thumb-1.jpg" alt="" /></div>
+                                                <h3><a href="shop-single.html">کیف پول </a></h3>
+                                                <div class="quantity-text"> تعداد  1</div>
+                                                <div class="price">99000 تومان</div>
+                                            </div>
+                                        </div>
+                                        <div class="cart-product">
+                                            <div class="inner">
+                                                <div class="cross-icon"><span class="icon fa fa-remove"></span></div>
+                                                <div class="image"><img src="Content/images/resource/post-thumb-2.jpg" alt="" /></div>
+                                                <h3><a href="shop-single.html">جعبه بوکس</a></h3>
+                                                <div class="quantity-text"> تعداد  1</div>
+                                                <div class="price">99000 تومان</div>
+                                            </div>
+                                        </div>
+                                        <div class="cart-total">جمع کل:  <span>198000 تومان</span></div>
+                                        <ul class="btns-boxed">
+                                            <li><a href="shopping-cart.html">نمایش سبد </a></li>
+                                            <li><a href="checkout.html">پرداخت </a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Search Btn -->
+                            <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>
+
+                            <!-- Nav Btn -->
+                            <div class="nav-btn mobile-nav-toggler embed-responsive-16by9"><span class="icon flaticon-menu"></span></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div><!-- End Sticky Menu -->
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+
+
+
+            </div><!-- End Mobile Menu -->
+
+        </header>
+        <!-- End Main Header -->
+        @RenderSection("Slider", false)
+        @RenderSection("LastBlogs", false)
+        @RenderBody()
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="pattern-layer-one" style="background-image: url(Content/images/background/pattern-7.png)"></div>
+            <div class="pattern-layer-two" style="background-image: url(Content/images/background/pattern-8.png)"></div>
+            <!--Waves end-->
+            <div class="auto-container">
+                <!--Widgets Section-->
+                <div class="widgets-section">
+                    <div class="row clearfix">
+
+                        <!-- Column -->
+                        <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                            <div class="row clearfix">
+
+                                <!-- Footer Column -->
+                                <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                                    <div class="footer-widget logo-widget">
+                                        @Html.Action("FooterSite", "Footer", new { area = "" })
+                                    </div>
+                                </div>
+
+                                <!-- Footer Column -->
+                                <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                                    <div class="footer-widget links-widget">
+                                        <h5>لینک های کمکی </h5>
+                                        <ul class="list-link">
+                                            <li><a href="/">خانه</a></li>
+                                            <li><a href="/AboutUs">درباره ی ما</a></li>
+                                            <li><a href="/GalleyProject/@ViewBag.CurrentBlog"> گالری پروژه ها</a></li>
+                                            <li><a href="/Archive/@ViewBag.CurrentBlog">وبلاگ ها<</a></li>
+                                            <li><a href="#">تماس با ما</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Column -->
+                        <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                            <div class="row clearfix">
+
+                                <!-- Footer Column -->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget news-widget">
+                                        <h5>پست های اخیر</h5>
+                                        <!-- Footer Column -->
+                                        <div class="widget-content">
+                                            @Html.Action("LastBlogsFooter","Footer",new {area = ""})
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Footer Column -->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget contact-widget">
+                                        <h5>تماس با ما </h5>
+                                        @Html.Action("FooterContact", "Footer", new { area = "" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="auto-container">
+                        <div class="row clearfix">
+                            <!-- Column -->
+                            <div class="column col-lg-6 col-md-12 col-sm-12">
+                                <ul class="footer-nav">
+                                    <li><a href="/GalleyProject/@ViewBag.CurrentBlog"> گالری پروژه ها</a></li>
+                                    <li><a href="/Archive/@ViewBag.CurrentBlog">وبلاگ ها</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+
+    </div>
+    <!--End pagewrapper-->
+    <!-- Search Popup -->
+    <div class="search-popup">
+        <button class="close-search style-two"><span class="flaticon-multiply"></span></button>
+        <button class="close-search"><span class="flaticon-up-arrow-1"></span></button>
+        <form method="post" action="/Search">
+            <div class="form-group">
+                <input type="search" name="q" value="" placeholder="اینجا جستجو کنید" required="">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- End Header Search -->
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+
+    <script src="@Url.Content("~/Content/js/jquery.js")"></script>
+    <script src="@Url.Content("~/Content/js/popper.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/jquery.mCustomScrollbar.concat.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/jquery.fancybox.js")"></script>
+    <script src="@Url.Content("~/Content/js/appear.js")"></script>
+    <script src="@Url.Content("~/Content/js/parallax.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/tilt.jquery.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/jquery.paroller.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/owl.js")"></script>
+    <script src="@Url.Content("~/Content/js/wow.js")"></script>
+    <script src="@Url.Content("~/Content/js/nav-tool.js")"></script>
+    <script src="@Url.Content("~/Content/js/jquery-ui.js")"></script>
+    <script src="@Url.Content("~/Content/js/script.js")"></script>
+    <script src="@Url.Content("~/Content/js/color-settings.js")"></script>
+
+</body>
+
+</html>

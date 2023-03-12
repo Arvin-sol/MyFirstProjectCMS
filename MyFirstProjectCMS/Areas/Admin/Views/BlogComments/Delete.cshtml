@@ -1,0 +1,73 @@
+﻿@model DataLayer.Models.BlogComment
+
+@{
+    ViewBag.Title = "حذف نظر";
+}
+
+
+
+<h3>آیا از حذف این نظر مطمئن هستید؟</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Blog.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Blog.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Website)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Website)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommentText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(x=>x.CommentId)
+
+<div class="form-actions no-color">
+    <input type="submit" value="حذف" class="btn btn-danger" /> |
+    @Html.ActionLink("بازگشت به لیست نظرات", "Index")
+</div>
+    }
+</div>

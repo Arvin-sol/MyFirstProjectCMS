@@ -1,0 +1,106 @@
+﻿@model IEnumerable<DataLayer.Models.ContactUs>
+    <!-- Sidebar Cart Item -->
+<div class="xs-sidebar-group info-group">
+    <div class="xs-overlay xs-bg-black"></div>
+    <div class="xs-sidebar-widget">
+        <div class="sidebar-widget-container">
+            <div class="widget-heading">
+                <a href="#" class="close-side-widget">
+                    X
+                </a>
+            </div>
+            <div class="sidebar-textwidget">
+
+                <!-- Sidebar Info Content -->
+                <div class="sidebar-info-contents">
+                    <div class="content-inner">
+                        <div class="logo">
+                            <a href="index.html"><img src="images/logo-2.png" alt="" /></a>
+                        </div>
+                        <div class="content-box">
+                            <h2> درباره ما </h2>
+                        </div>
+                        <!-- Social Box -->
+                        <ul class="social-box">
+                            <li class="facebook"><a href="#" class="fa fa-facebook-f"></a></li>
+                            <li class="twitter"><a href="#" class="fa fa-twitter"></a></li>
+                            <li class="linkedin"><a href="#" class="fa fa-linkedin"></a></li>
+                            <li class="instagram"><a href="#" class="fa fa-instagram"></a></li>
+                            <li class="youtube"><a href="#" class="fa fa-youtube"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END sidebar widget item -->
+<!--Page Title-->
+<section class="page-title">
+    <div class="pattern-layer-one" style="background-image: url(/content/images/background/pattern-16.png)"></div>
+    <div class="auto-container">
+        <h2>تماس با ما</h2>
+        <ul class="page-breadcrumb">
+            <li><a href="/">صفحه اصلی </a></li>
+            <li>تماس با ما</li>
+        </ul>
+    </div>
+</section>
+<!--End Page Title-->
+<!-- Contact Info Section -->
+<section class="contact-info-section">
+    @foreach (var item in Model)
+    {
+        <div class="auto-container">
+            <!-- Sec Title -->
+            <div class="title-box">
+                <div class="title">در تماس باشید</div>
+                <div class="text">برای سوالات عمومی می توانید با تیم پشتیبانی میز جلو تماس بگیرید <br> با ایمیل <a href="mailto:@item.Email">@item.Email</a> در تماس باشید <a href="tel:@item.PhoneNumber">@item.PhoneNumber</a></div>
+            </div>
+
+            <div class="row clearfix">
+
+                <!-- Info Column -->
+                <div class="info-column col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-column">
+                        <div class="content">
+                            <div class="icon-box"><span class="flaticon-pin"></span></div>
+                            <ul>
+                                <li><strong>آدرس </strong></li>
+                                <li>@item.Location</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Column -->
+                <div class="info-column col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-column">
+                        <div class="content">
+                            <div class="icon-box"><span class="flaticon-phone-call"></span></div>
+                            <ul>
+                                <li><strong>تلفن </strong></li>
+                                <li>@item.PhoneNumber</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Column -->
+                <div class="info-column col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-column">
+                        <div class="content">
+                            <div class="icon-box"><span class="flaticon-email-1"></span></div>
+                            <ul>
+                                <li><strong>ایمیل </strong></li>
+                                <li>@item.Email</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    </section>
+<!-- End Contact Info Section -->

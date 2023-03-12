@@ -1,0 +1,72 @@
+﻿@model DataLayer.Models.ViewModels.AdminLoginViewModel
+@{
+    ViewBag.Title = "ورود به سایت";
+}
+
+<!--Page Title-->
+<section class="page-title">
+    <div class="pattern-layer-one" style="background-image: url(/Content/images/background/pattern-16.png)"></div>
+    <div class="auto-container">
+        <h2>ورود </h2>
+        <ul class="page-breadcrumb">
+            <li><a href="/">صفحه اصلی </a></li>
+            <li>ورود </li>
+        </ul>
+    </div>
+</section>
+<!--End Page Title-->
+<!--Register Section-->
+<section class="register-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!--Form Column-->
+            <div class="form-column column col-lg-6 col-md-12 col-sm-12" style="margin-right:270px">
+
+                <div class="sec-title" style="text-align:center">
+                    <h2>اکنون وارد شوید</h2>
+                    <div class="separate"></div>
+                </div>
+
+                <!--Login Form-->
+                <div class="styled-form login-form">
+                    <form method="post" action="/Account/Login">
+
+                        @*<div class="form-group">
+                                <span class="adon-icon"><span class="fa fa-envelope-o"></span></span>
+                                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control", placeholder = "ایمیل خود را وارد نمایید" } })
+                                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                            </div>*@
+                        <div class="form-group">
+                            <span class="adon-icon"><span class="fa fa-envelope-o"></span></span>
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "ایمیل خود را وارد نمایید" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <span class="adon-icon"><span class="fa fa-unlock-alt"></span></span>
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "رمز عبور خود را وارد نمایید" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group pull-left">
+                                <button type="submit" class="theme-btn btn-style-three"><span class="txt">ورود </span></button>
+                            </div>
+
+                        </div>
+
+                        <div class="clearfix">
+                            <div class="pull-left">
+                                <input type="checkbox" id="remember-me" name="RememberMe"><label class="remember-me" for="remember-me">&nbsp; مرا به خاطر بسپار</label>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!--End Register Section-->

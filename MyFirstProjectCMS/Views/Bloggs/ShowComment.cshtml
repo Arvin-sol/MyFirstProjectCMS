@@ -1,0 +1,14 @@
+﻿@model IEnumerable<DataLayer.Models.BlogComment>
+@using MyProjectCMS.Utilities 
+
+    @foreach (var item in Model)
+    {
+        <div class="comment-box">
+            <div class="comment">
+                <div class="author-thumb"><img src="/Content/images/resource/author-1.jpg" alt="@item.Name"style="width:110px;height:110px;"></div>
+                <div class="comment-info clearfix"><strong>@item.Name </strong><div class="comment-time">@item.CreateDate.ConvertToShamsi()</div></div>
+                <div class="text">@item.CommentText</div>
+            </div>
+        </div>
+    }
+

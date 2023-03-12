@@ -1,0 +1,47 @@
+﻿@model DataLayer.Models.Footer
+
+@{
+    ViewBag.Title = "حذف";
+}
+
+
+
+<h3>آیا از حذف اطلاعات فوتر اطمینان دارید؟</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortDescriptionAboutForm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortDescriptionAboutForm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+
+        <dd>
+            <img src="~/Images/@Model.ImageName" class="thumbnail" style="max-width: 100px;max-height:100PX" />
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(x => x.Id)
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink(" بازگشت ", "Index")
+        </div>
+    }
+</div>

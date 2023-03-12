@@ -1,0 +1,19 @@
+﻿
+@model IEnumerable<DataLayer.Models.Blog>
+@using MyProjectCMS.Utilities
+
+<div class="sidebar-widget popular-posts">
+    <div class="sidebar-title">
+        <h5>پست های اخیر : -</h5>
+    </div>
+    <div class="widget-content">
+        @foreach (var item in Model)
+        {
+            <article class="post d-flex">
+                <figure class="post-thumb"><img src="~/Images/@item.ImageName" alt="@item.Title" style="width:80px;height:80px;"><a href="/Blogs/@item.BlogId" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
+                <div class="text"><a href="/Blogs/@item.BlogId">@item.Title</a></div>
+                <div class="post-info">@item.CreateDate.ConvertToShamsi()</div>
+            </article>
+        }
+    </div>
+</div>

@@ -1,0 +1,72 @@
+﻿
+@model IEnumerable<DataLayer.Models.Blog>
+@using MyProjectCMS.Utilities
+
+@{
+    ViewBag.Title = "آرشیو مقالات";
+}
+
+<style>
+    .disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+</style>
+
+<!--Page Title-->
+<section class="page-title">
+    <div class="pattern-layer-one" style="background-image: url(/Content/images/background/pattern-10.png)"></div>
+    <div class="auto-container">
+        <h2>آرشیو مقالات</h2>
+        <ul class="page-breadcrumb">
+            <li><a href="/">صفحه اصلی </a></li>
+            <li>آرشیو مقالات </li>
+        </ul>
+    </div>
+</section>
+<!--End Page Title-->
+<!-- Blog Page Section -->
+<section class="blog-page-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            @foreach (var item in Model)
+            {
+                <!-- News Block -->
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image">
+                            <a href="/Blogs/@item.BlogId"><img src="~/Images/@item.ImageName" alt="@item.Title" style="width:370px;height:270px;" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <div class="post-date">@item.CreateDate <span> </span></div>
+                            <ul class="post-meta">
+                                <li><span class="icon flaticon-comment"></span>تعداد 3 نظر </li>
+                            </ul>
+                            <h4><a href="/Blogs/@item.BlogId">@item.Title</a></h4>
+                            <div class="text">@item.ShortDescription</div>
+                            <a class="read-more" href="/Blogs/@item.BlogId">ادامه مطلب <span class="arrow flaticon-long-arrow-pointing-to-the-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+
+        </div>
+
+        <!-- Post Share Options -->
+        <div class="styled-pagination text-center">
+            <ul class="clearfix">
+                <li class="prev @(((int)ViewBag.CurrentBlog==1) ? "disabled" : " ") "><a href="/Archive/@(ViewBag.CurrentBlog-1)"><span class="fa fa-angle-left"></span> </a></li>
+                @for (int i = 1; i < @ViewBag.BlogCount + 1; i++)
+                {
+                    <li class="@(((int)ViewBag.CurrentBlog==i)? "active" : " ")"><a href="/Archive/@i">@i</a></li>
+                }
+                <li class="next @(((int)ViewBag.CurrentBlog >= ViewBag.BlogCount) ? "disabled" : " ")"><a href="/Archive/@(ViewBag.CurrentBlog+1)"><span class="fa fa-angle-right"></span> </a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!-- End Blog Page Section -->

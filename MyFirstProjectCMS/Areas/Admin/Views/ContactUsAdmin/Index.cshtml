@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DataLayer.Models.ContactUs>
+
+@{
+    ViewBag.Title = "لیست  تماس با ما ";
+}
+
+<p>
+    @Html.ActionLink("افزودن", "Create")
+</p>
+<table class="table" style=" border: solid; border-color: cadetblue">
+    <tr>
+        <th colspan="3" style="text-align:center;background-color:lightcoral"> لطفا برای این بخش تعداد تصاویر شما<span style="text-decoration: underline;"> کمتر یا بیشتر از یک عدد </span>  نباشد    </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(z => z.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(z => z.PhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Location)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PhoneNumber)
+    </td>
+
+    <td>
+        @Html.ActionLink("ویرایش", "Edit", new { id = item.Id }) |
+
+        @Html.ActionLink("حذف", "Delete", new { id = item.Id })
+    </td>
+</tr>
+
+    }
+</table>

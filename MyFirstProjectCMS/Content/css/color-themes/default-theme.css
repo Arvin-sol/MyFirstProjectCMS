@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* CSS Document */
+
+a,
+.theme_color,
+.scroll-to-top,
+.sec-title .title,
+.shop-list li a,
+.list-style-one li .icon,
+.social-icon-one li a:hover,
+.sidebar .service-list li a .arrow,
+.main-menu .navigation > li > ul > li:hover > a,
+.main-menu .navigation > li:hover > a,
+.main-menu .navigation > li > ul > li > a:before,
+.banner-section-four .slide-item .title,
+.banner-section-four .content-box .video-link a,
+.main-menu .navigation > li.current > a,
+.main-header .cart-box .cart-box-btn,
+.main-header .cart-product .inner h3 a:hover,
+.feature-block .inner-box .icon,
+.service-block .inner-box h5 a,
+.cases-section .section-text,
+.testimonial-section .lower-text a,
+.about-section .images-column .learn,
+.service-block .inner-box:hover .arrow,
+.service-block-two .inner-box .icon-box,
+.technology-block .inner-box .icon-box,
+.experiance-tabs .tabs-content h4,
+.fact-counter .column .inner .counter-title,
+.news-block .inner-box .lower-content h4 a:hover,
+.news-block .inner-box .lower-content .read-more:hover,
+.technology-block .inner-box:hover .icon-box,
+.news-block .inner-box .lower-content .post-date,
+.news-block .inner-box .lower-content .post-meta li,
+.case-block .inner-box .image .overlay-box .content h4 a:hover,
+.case-block .inner-box .image .overlay-box .search-icon,
+.main-header .cart-box .cart-panel .btns-boxed li a:hover,
+.main-menu .navigation > li > ul > li > ul > li:hover > a,
+.main-menu .navigation > li > ul > li > ul > li > a:before,
+.main-header .header-top .info-list li a:hover,
+.banner-section-two .content-column .video-box,
+.process-block .inner-box h4 a:hover,
+.process-block .inner-box .read-more,
+.appointment-form .form-group .icon,
+.banner-section-two .owl-nav .owl-prev:hover,
+.main-footer .contact-widget ul li a:hover,
+.main-header .info-box .icon-box,
+.news-block-two .inner-box .content-column .post-meta li .icon,
+.banner-section-three .owl-nav .owl-prev:hover,
+.banner-section-three .owl-nav .owl-next:hover,
+.news-block-two .inner-box .content-column h4 a:hover,
+.experiance-tabs .tab-btns .tab-btn .icon,
+.news-block-three .inner-box .lower-content h4 a:hover,
+.news-block-three .inner-box .lower-content .icon-box .icon,
+.news-block-three .inner-box .lower-content .read-more:hover,
+.banner-section-two .owl-nav .owl-next:hover,
+.cases-section-two .owl-nav .owl-prev:hover,
+.cases-section-two .owl-nav .owl-next:hover,
+.price-block .inner-box .price,
+.page-breadcrumb li a:hover,
+.accordion-box .block .icon,
+.services-detail .inner-box h3,
+.news-block-four .inner-box .lower-content .post-meta li,
+.case-block-two .inner-box .lower-content h5 a:hover,
+.news-block-four .inner-box .lower-content h4 a:hover,
+.case-block-two .inner-box .image .overlay-box .search-icon,
+.coming-soon .emailed-form .form-group input[type="submit"],
+.project-detail-section .info-column .info-list li strong,
+.sidebar .search-box .form-group button,
+.sidebar .popular-posts .post a:hover,
+.gallery-section .filters .filter.active,
+.gallery-section .filters .filter:hover,
+.shop-page .prod-tabs .reviews-container .rev-header .rating,
+.product-details .basic-details .details-header .rating span,
+.coming-soon .emailed-form button,
+.cart-table tbody tr .remove-btn,
+.checkout-page .default-links li a,
+.archive-list li a:before,
+.list-style-two li:before,
+.contact-info-section .title-box .title,
+.contact-info-section .info-column .icon-box,
+.checkout-page .payment-options li .what-paypall,
+.news-block-five .inner-box .lower-content h4 a:hover,
+.news-block-five .inner-box .lower-content .post-meta li,
+.shop-page .prod-tabs .add-review .rating .rate-box:hover,
+.shop-page .prod-tabs .add-review .rating .rate-box:focus,
+.shop-page .prod-tabs .add-review .rating .rate-box:active,
+.news-detail .inner-box .upper-box .post-meta li,
+.news-detail .post-share-options .social-box li a:hover{
+	color:#0060ff;
+}
+
+.sticky-header .main-menu .navigation > li:hover > a,
+.sticky-header .main-menu .navigation > li.current > a{
+	color:#0060ff !important;
+}
+
+/* Background Color */
+
+.btn-style-one,
+.header-top-two,
+.checkout-btn,
+.scroll-to-top:hover,
+.cart-table .cart-header,
+.btn-style-three:before,
+.call-to-action-section,
+.team-block .inner-box .image,
+.search-popup .close-search,
+.service-block .inner-box .arrow,
+.services-section-two .upper-box,
+.main-footer.style-three .footer-bottom,
+.service-block-two .inner-box .shape-one,
+.service-block-two .inner-box .shape-two,
+.header-style-four .header-lower .nav-outer,
+.main-header .cart-box .cart-panel .btns-boxed li a,
+.case-block .inner-box .image .overlay-box .arrow,
+.testimonial-section .owl-dots .owl-dot.active,
+.testimonial-section .owl-dots .owl-dot:hover,
+.team-block .inner-box .lower-box .social-box,
+.banner-section-four .owl-dot.active,
+.news-block .inner-box .image,
+.team-block-two .inner-box .image,
+.accordion-box .block .acc-btn.active,
+.price-block .inner-box:hover::before,
+.process-block .inner-box:hover .number-box,
+.main-footer .logo-widget .social-box li a,
+.team-block-two .inner-box .lower-box .social-box,
+.news-block-two .inner-box .image-column .image,
+.news-block-two .inner-box .image-column .post-date,
+.call-to-action-section-two .inner-container:before,
+.news-detail .inner-box .image .post-date,
+.main-header .header-lower .options-box .option-inner:before,
+.case-block .inner-box .image .overlay-box .search-icon:hover,
+.service-block-three .inner-box:before,
+.news-block-three .inner-box .image,
+.news-section-four .image-layer:before,
+.news-block-four .inner-box .image,
+.sidebar .popular-tags a:hover,
+.news-detail .post-share-options .tags a:hover,
+.news-block-four .inner-box .lower-content .post-date,
+.case-block-two .inner-box .image .overlay-box .arrow,
+.emailed-form .form-group input[type="submit"], .emailed-form button,
+.case-block-two .inner-box .image .overlay-box .search-icon:hover,
+.sidebar .service-list li a:hover .arrow,
+.sidebar .service-list li.current a .arrow,
+.styled-pagination li.next a,
+.styled-pagination li.prev a,
+.news-block-five .inner-box .image,
+.news-block-five .inner-box .lower-content .post-date,
+.news-detail .inner-box .lower-content blockquote,
+.sidebar-page-container .comments-area .comment-box .theme-btn,
+.main-header .sticky-header .outer-box .cart-box .cart-box-btn .total-cart,
+.main-menu .navigation > li:before{
+	background-color:#0060ff;
+}
+
+.experiance-tabs .tab-btns .tab-btn:before{
+	background: -webkit-radial-gradient(circle farthest-corner at center center, #0060ff 0%, #131E3C 100%);
+    background: -moz-radial-gradient(circle farthest-corner at center center, #0060ff 0%, #131E3C 100%);
+    background: radial-gradient(circle farthest-corner at center center, #0060ff 0%, #131E3C 100%);
+}
+
+.main-footer{
+	background: -webkit-radial-gradient(circle farthest-corner at center center, #0060ff 0%, #131E3C 100%);
+    background: -moz-radial-gradient(circle farthest-corner at center center, #0060ff 0%, #131E3C 100%);
+    background: radial-gradient(circle farthest-corner at center center, #0060ff 0%, #131E3C 100%);
+}
+
+.service-block .inner-box:before{
+    background-image: -ms-linear-gradient(top, #131E39 0%, #0060ff 100%);
+    background-image: -moz-linear-gradient(top, #131E39 0%, #0060ff 100%);
+    background-image: -o-linear-gradient(top, #131E39 0%, #0060ff 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #131E39), color-stop(100, #0060ff));
+    background-image: -webkit-linear-gradient(top, #131E39 0%, #0060ff 100%);
+    background-image: linear-gradient(to bottom, #131E39 0%, #0060ff 100%);
+}
+
+.about-section-two:before,
+.contact-widget .widget-content:before,
+.feature-block-two .inner-box:hover::before,
+.sidebar .popular-posts .post .post-thumb .overlay-box,
+.instagram-widget .post-thumb .overlay-box{
+	background-color:rgba(0,96,255,0.70);
+}
+
+.appointment-section .image-layer:before{
+	background-color:rgba(0,96,255,0.90);
+}
+
+/* Border Color */
+.sidebar .popular-tags a:hover,
+.main-footer .footer-bottom,
+.single-product-item .img-holder,
+.team-block .inner-box .lower-box,
+.cases-section-two .owl-nav .owl-prev:hover,
+.cases-section-two .owl-nav .owl-next:hover,
+.main-header .cart-box .cart-panel .btns-boxed li a,
+.main-header .cart-box .cart-panel,
+.main-header .search-box .form-group input[type="text"],
+.main-header .search-box .form-group input[type="search"],
+.appointment-form .form-group input:focus,
+.appointment-form .form-group select:focus,
+.appointment-form .form-group textarea:focus,
+.faq-form .form-group input[type="text"]:focus,
+.faq-form .form-group input[type="tel"]:focus,
+.faq-form .form-group input[type="email"]:focus,
+.faq-form .form-group textarea:focus,
+.shop-form input:focus,
+.shop-form select:focus,
+.shop-form textarea:focus,
+.news-detail .post-share-options .tags a:hover,
+.cart-section .apply-coupon .form-group input[type="text"],
+.styled-pagination li.next a,
+.styled-pagination li.prev a,
+.styled-form input:focus,
+.styled-form select:focus,
+.styled-form textarea:focus,
+.contact-form .form-group input[type="text"]:focus,
+.contact-form .form-group input[type="tel"]:focus,
+.contact-form .form-group input[type="email"]:focus,
+.contact-form .form-group textarea:focus{
+	border-color:#0060ff;
+}
+
+@media only screen and (max-width: 767px){
+	
+	.main-menu .navbar-header .navbar-toggle{
+		
+	}
+	
+	.main-menu .navbar-header .navbar-toggle,
+	.main-menu .navbar-collapse > .navigation,
+	.main-menu .navbar-collapse > .navigation > li > ul,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul,
+	.main-menu .navbar-collapse > .navigation > li > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul > li > a,
+	.main-menu .navbar-collapse > .navigation > li > a:hover,
+	.main-menu .navbar-collapse > .navigation > li > a:active,
+	.main-menu .navbar-collapse > .navigation > li > a:focus,
+	.main-menu .navbar-collapse > .navigation > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li.current > a,
+	.main-menu .navbar-collapse > .navigation > li.current-menu-item > a,
+	.header-style-two.inner-header .main-menu .navigation > li > a{
+		
+	}
+	
+}

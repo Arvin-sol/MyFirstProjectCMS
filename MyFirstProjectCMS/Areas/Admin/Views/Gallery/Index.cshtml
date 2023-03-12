@@ -1,0 +1,72 @@
+﻿@model IEnumerable<DataLayer.Models.Gallery>
+@using MyProjectCMS.Utilities
+@{
+    ViewBag.Title = "Index";
+}
+<p style="margin-top:20px">
+    <a class="btn btn-success btn-lg" href="@Url.Action("Create")">افزودن گالری پروژه </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.URL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+    
+
+        <th>
+            @Html.DisplayNameFor(model => model.Visit)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.CreatDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        <img src="~/Images/@item.ImageName" class="thumbnail" style="width:100px;height:100px;">
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProjectName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Location)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.URL)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Title)
+    </td>
+
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Visit)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.CreatDate)
+    </td>
+    <td>
+        <a target="_blank" class="btn btn-warning btn-xs" href="@Url.Action("Edit",new {id=item.GalleryId})">ویرایش </a>|
+        <a target="_blank" class="btn btn-danger btn-xs" href="@Url.Action("Delete",new {id=item.GalleryId})">حذف </a>
+    </td>
+</tr>
+    }
+
+</table>

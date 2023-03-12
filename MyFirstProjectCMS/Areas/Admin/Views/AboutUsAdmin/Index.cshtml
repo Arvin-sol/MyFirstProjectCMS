@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DataLayer.Models.AboutUs>
+
+@{
+    ViewBag.Title = "لیست تصویر درباره ما ";
+}
+
+<p style="margin-top:20px">
+    <a class="btn btn-success btn-lg" href="@Url.Action("Create")">افزودن درباره ما </a>
+</p>
+<table class="table" style=" border: solid; border-color: cadetblue">
+    <tr>
+        <th colspan="3" style="text-align:center;background-color:lightcoral"> لطفا برای این بخش تعداد درباره ما<span style="text-decoration: underline;"> کمتر یا بیشتر از یک عدد </span>  نباشد    </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(z => z.ImageName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Title)
+    </td>
+    <td>
+        <img src="~/Images/@item.ImageName" class="thumbnail" style="width: 100px;height:100PX" />
+    </td>
+
+    <td>
+        <a target="_blank" class="btn btn-warning btn-xs" href="@Url.Action("Edit",new {id=item.Id})">ویرایش </a>|
+        <a target="_blank" class="btn btn-danger btn-xs" href="@Url.Action("Delete",new {id=item.Id})">حذف </a>
+    </td>
+</tr>
+
+    }
+    </table>

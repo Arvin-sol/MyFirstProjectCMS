@@ -1,0 +1,36 @@
+﻿@model IEnumerable<DataLayer.Models.Slider>
+
+@{String active = "active";}
+<section class="banner-section">
+    <div class="main-slider-carousel owl-carousel owl-theme">
+        @foreach (var item in Model)
+        {
+            <div class="slide @active" style="background-size:cover; background-repeat:no-repeat; background-image: url(/Images/Sliders/@item.ImageName)">
+                <div class="patern-layer-one" style="background-image: url(Content/images/main-slider/pattern-1.png)"></div>
+                <div class="patern-layer-two" style="background-image: url(Content/images/main-slider/pattern-2.png)"></div>
+                <div class="auto-container">
+
+                    <!-- Content Column -->
+                    <div class="content-column">
+                        <div class="inner-column">
+                            <div class="patern-layer-three" style="background-image: url(Content/images/main-slider/pattern-3.png)"></div>
+                            <div class="title">@item.Title</div>
+                            <br />
+                            <h1 class="text-white">@item.SliderText</h1>
+                            <div class="btns-box">
+                                <a href="@item.SliderURL" class="theme-btn btn-style-one"><span class="txt">مطالعه بیشتر</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            active = "";
+        }
+
+
+
+
+    </div>
+
+</section>

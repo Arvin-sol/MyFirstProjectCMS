@@ -1,0 +1,36 @@
+﻿@model IEnumerable<DataLayer.Models.Blog>
+@using MyFirstProjectCMS.Utilities
+<!-- News Section -->
+<section class="news-section ">
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title centered">
+            <div class="title">وبلاگ ما</div>
+            <h2>بررسی  <br> اخبار سایت </h2>
+        </div>
+        <div class="row clearfix">
+            <!-- News Block -->
+            @foreach (var item in Model)
+            {
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image" >
+                            <a href="/Blogs/@item.BlogId"><img style="width:370px; height:270px;" src="~/Images/@item.ImageName" alt="@item.Title" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <div class="post-date">@item.CreateDate</div>
+                            <ul class="post-meta">
+                                <li><span class="icon flaticon-comment"></span>2 </li>
+                            </ul>
+                            <h4><a href="/Blogs/@item.BlogId">@item.Title</a></h4>
+                            <div class="text">@item.ShortDescription</div>
+                            <a class="read-more" href="/Blogs/@item.BlogId">ادامه مطلب <span class="arrow flaticon-long-arrow-pointing-to-the-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+<!-- End News Section -->

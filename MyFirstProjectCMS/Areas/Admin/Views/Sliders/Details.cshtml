@@ -1,0 +1,66 @@
+﻿@model DataLayer.Models.Slider
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Slider</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StardSlider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StardSlider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndSlider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndSlider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SliderURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SliderURL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SliderId}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

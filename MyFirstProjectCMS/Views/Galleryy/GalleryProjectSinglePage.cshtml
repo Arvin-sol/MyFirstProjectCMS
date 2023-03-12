@@ -1,0 +1,100 @@
+﻿@model DataLayer.Models.Gallery
+@using MyProjectCMS.Utilities
+
+@{
+    ViewBag.Title = "جزئیات پروژه";
+}
+                <!--Page Title-->
+                <section class="page-title">
+                    <div class="pattern-layer-one" style="background-image: url(/Content/images/background/pattern-16.png)"></div>
+                    <div class="auto-container">
+                        <h2>جزئیات پروژه </h2>
+                        <ul class="page-breadcrumb">
+                            <li><a href="/">صفحه اصلی </a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--End Page Title-->
+                <!-- Sidebar Page Container -->
+                <div class="sidebar-page-container">
+                    <div class="auto-container">
+                        <div class="row clearfix">
+
+                            <!-- Content Side -->
+                            <div class="content-side col-lg-8 col-md-12 col-sm-12">
+                                <div class="news-detail">
+                                    <div class="inner-box">
+                                        <div class="upper-box">
+                                            <h3>@Model.Title</h3>
+                                            <ul class="post-meta">
+                                                <li>@Model.CreatDate.ConvertToShamsi()</li>
+                                            </ul>
+                                        </div>
+                                        <div class="image">
+                                            <img src="~/Images/@Model.ImageName" alt="@Model.Title" style="width:770px;height:370px;" />
+                                            @*<div class="post-date">@Model.CreateDate.ConvertToShamsi()</div>*@
+                                        </div>
+
+                                        <div class="lower-content">
+                                            <p>@Model.ShortDescription</p>
+                                            <blockquote>
+                                                <div class="blockquote-inner">
+                                                    @Model.ShortDescription
+                                                    <span class="quote-icon flaticon-quotation-mark"></span>
+                                                </div>
+                                            </blockquote>
+                                            <p></p>
+
+                                            <p>@Html.Raw(Model.BlogText)</p>
+
+
+
+                                            <!-- Post Share Options-->
+                                            <div class="post-share-options">
+                                                <div class="post-share-inner clearfix">
+                                                    <div class="pull-left tags">
+                                                        @foreach (var item in Model.Tag.Split(','))
+                                                        {
+                                                            <a href="/Search?q=@item">@item </a>
+                                                        }
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- Info Column -->
+                            <div class="sidebar-side left-sidebar col-lg-4 col-md-12 col-sm-12">
+                                <aside class="sidebar sticky-top">
+                                    <div class="sidebar-inner">
+                                        <h4>اطلاعات پروژه </h4>
+                                        <div class="text">@Model.ShortDescription</div>
+                                        <ul class="info-list">
+                                            <li><span class="icon flaticon-timetable"></span><strong>تاریخ:  </strong>@Model.CreatDate.ConvertToShamsi()</li>
+                                            <li><span class="icon fa fa-globe"></span><strong>وب سایت:  </strong>@Model.URL</li>
+                                            <li><span class="icon fa fa-map-marker"></span><strong>موقعیت:  </strong>@Model.Location</li>
+                                        </ul>
+                                    </div>
+                                </aside>
+                            </div>
+
+
+                        </div>
+                            </div>
+                        </div>
+                   
+                <!-- End Sidebar Page Container -->
+            
+    
+
+
+
+

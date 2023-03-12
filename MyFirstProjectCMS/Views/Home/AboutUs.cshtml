@@ -1,0 +1,65 @@
+﻿@model IEnumerable<DataLayer.Models.AboutUs>
+@{
+    ViewBag.Title = "درباره ما";
+}
+<!--Page Title-->
+<section class="page-title">
+    <div class="pattern-layer-one" style="background-image: url(/content/images/background/pattern-16.png)"></div>
+    <div class="auto-container">
+        <h2> درباره ما </h2>
+        <ul class="page-breadcrumb">
+            <li><a href="/">صفحه اصلی </a></li>
+            <li>درباره ما </li>
+        </ul>
+    </div>
+</section>
+<!--End Page Title-->
+<!-- About Section -->
+<section class="about-section">
+    <div class="auto-container">
+        <!-- Sec Title -->
+        @foreach (var item in Model)
+        {
+            <div class="sec-title">
+                <div class="title">درباره ما</div>
+                <h2>@item.Title</h2>
+            </div>
+
+
+            <div class="row clearfix">
+
+                <!-- Content Column -->
+                <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <div class="text">@Html.Raw(item.AboutUsText)</div>
+                        <div class="blocks-outer">
+
+
+
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Images Column -->
+                <div class="images-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column" style="background-image: url(/Content/images/icons/globe.png)">
+                        <div class="pattern-layer" style="background-image: url(/Content/images/background/pattern-1.png)"></div>
+                        <div class="images-outer parallax-scene-1">
+                            <div class="image" data-depth="0.10">
+                                <img src="/Images/@item.ImageName" alt="@item.Title" style="width:400px;height:400px" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+
+</section>
+<!-- End About Section -->

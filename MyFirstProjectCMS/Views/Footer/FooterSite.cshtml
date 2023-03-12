@@ -1,0 +1,17 @@
+﻿@model IEnumerable<DataLayer.Models.Footer>
+    @foreach(var item in Model)
+            {
+<div class="footer-widget logo-widget">
+    <div class="logo">
+        <a href="/"><img src="~/Images/@item.ImageName" alt="@item.Title" /></a>
+    </div>
+    <div class="text">@item.ShortDescriptionAboutForm </div>
+    <!-- Social Box -->
+    <ul class="social-box">
+        <li><a href="#" class="fa fa-facebook-f"></a></li>
+        <li><a href="#" class="fa fa-linkedin"></a></li>
+        <li><a href="#" class="fa fa-twitter"></a></li>
+        <li><a href="#" class="fa fa-google"></a></li>
+    </ul>
+</div>
+            }

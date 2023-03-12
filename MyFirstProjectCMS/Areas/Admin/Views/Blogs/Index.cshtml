@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DataLayer.Models.Blog>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            تصویر بلاگ
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BlogGroup.GroupTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Visit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="~/Images/@item.ImageName" class="thumbnail" style="width:82px" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BlogGroup.GroupTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Visit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.BlogId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.BlogId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.BlogId })
+        </td>
+    </tr>
+}
+
+</table>
